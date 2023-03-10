@@ -1,0 +1,24 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        int num = 2, a = 0, b = 1, c = 0, flag = 0;
+        
+        while (c <= num) {
+            if (c == num) {
+                flag = 1;
+                break;
+            }
+            
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        
+        if (flag == 1) {
+            Console.WriteLine("{0} pertence à sequência de Fibonacci.", num);
+        } else {
+            Console.WriteLine("{0} não pertence à sequência de Fibonacci.", num);
+        }
+    }
+}
